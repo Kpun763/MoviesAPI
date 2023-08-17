@@ -1,0 +1,192 @@
+{
+	"info": {
+		"_postman_id": "b99a724f-2150-4113-87fc-2ccf038d4f30",
+		"name": "ASPNET_Movies_WebAPI",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "29173397"
+	},
+	"item": [
+		{
+			"name": "Get All",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://localhost:7265/api/Movies",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7265",
+					"path": [
+						"api",
+						"Movies"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get by ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7265/api/Movies/3",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7265",
+					"path": [
+						"api",
+						"Movies",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"{\r",
+							"    \"Title\"; \"The Dark Knight\",\r",
+							"    \"Running Time\"; 152,\r",
+							"    \"Genre\"; \"Action\"\r",
+							"}"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"Title\": \"The Dark Knight\",\r\n    \"RunningTime\": 152,\r\n    \"Genre\": \"Action\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7265/api/Movies",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7265",
+					"path": [
+						"api",
+						"Movies"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"{\r",
+							"    \"Title\"; \"The Dark Knight\",\r",
+							"    \"Running Time\"; 152,\r",
+							"    \"Genre\"; \"Action\"\r",
+							"}"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"Id\": 3,\r\n    \"Title\": \"Jumanji\",\r\n    \"RunningTime\": 104,\r\n    \"Genre\": \"Action-Adventure\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7265/api/Movies/3",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7265",
+					"path": [
+						"api",
+						"Movies",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Remove",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"{\r",
+							"    \"Title\"; \"The Dark Knight\",\r",
+							"    \"Running Time\"; 152,\r",
+							"    \"Genre\"; \"Action\"\r",
+							"}"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7265/api/Movies/7",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7265",
+					"path": [
+						"api",
+						"Movies",
+						"7"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
